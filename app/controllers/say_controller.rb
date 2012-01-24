@@ -7,6 +7,7 @@ class SayController < ApplicationController
   end
 
   def filenames
+    @files = Dir.glob('*')
   end
 
 end

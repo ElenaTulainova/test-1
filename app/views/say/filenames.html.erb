@@ -1,2 +1,23 @@
-<h1>Say#filenames</h1>
-<p>Find me in app/views/say/filenames.html.erb</p>
+<h1>Filenames</h1>
+
+<p>
+	<% for file in   Dir.glob('*') %> 
+	<ul> file name is: <%= file %>  </ul>
+	<% end %> 
+</p>	
+<h1>ALl files</h1>
+
+	<% for file in Dir.glob('*/*')%>
+	<ul> <%= file %></ul>
+	<% end %>
+	
+	<% for file in Dir.glob('*/*/*')%>
+	<ul> <%= file %></ul>
+	<% end %>
+	
+	<% for file in Dir.glob('*/*/*/*')%>
+	<ul> <%= file %></ul>
+	<% end %>
+<p>
+	Say <a href="/say/hello" >Hello</a>!
+</p>
